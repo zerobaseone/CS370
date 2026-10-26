@@ -1,12 +1,12 @@
 # CS 370: Pirate Intelligent Agent
 
-A deep Q-learning agent that teaches a "pirate" to find the treasure in an 8×8 maze from any open starting cell. Built in a Jupyter notebook with TensorFlow/Keras for SNHU's CS 370 (Current/Emerging Trends in CS).
+A deep Q-learning agent that teaches a "pirate" to find the treasure in an 8×8 maze from any open starting cell.
 
 ## Files
 
 | File | Description |
 |------|-------------|
-| `ProjectTwo.ipynb` | Main notebook: maze setup, neural network, and the Q-learning training loop |
+| `ProjectTwo.ipynb` | Jupyter notebook containing maze setup, neural network, and the Q-learning training loop |
 | `TreasureMaze.py` | The environment: maze matrix, movement rules, rewards, and game state (provided) |
 | `GameExperience.py` | Experience replay memory used to train the network (provided) |
 | `requirements.txt` | Python dependencies |
@@ -16,7 +16,7 @@ A deep Q-learning agent that teaches a "pirate" to find the treasure in an 8×8 
 **Provided starter code:**
 - `TreasureMaze.py`, which defines the maze, valid moves, rewards/penalties, and win/lose conditions
 - `GameExperience.py`, which stores past episodes and generates training batches
-- Notebook scaffolding: the maze matrix, the `show()` visualizer, `play_game()`, `completion_check()`, the `build_model()` network, the `train_step()` gradient update, and the setup portion of `qtrain()` (hyperparameters, environment, target network, and replay object)
+- Notebook: the maze matrix, the `show()` visualizer, `play_game()`, `completion_check()`, the `build_model()` network, the `train_step()` gradient update, and the setup portion of `qtrain()` (hyperparameters, environment, target network, and replay object)
 
 **My work:** I implemented the core deep Q-learning loop in `qtrain()`, the section marked `#TODO`/`START_HERE`. For each epoch, my code:
 
@@ -38,10 +38,10 @@ Computer scientists turn messy, real-world problems into precise models a comput
 
 ### How do I approach a problem as a computer scientist?
 
-Before I write code, I try to fully understand the problem and the existing codebase. Here that meant reading `TreasureMaze.py` and `GameExperience.py` so I knew what the methods expect/return. From there I broke the algorithm into small steps (following the pseudocode), implemented them one at a time, and checked output as I went.
+Before I write code, I try to fully understand the problem and the existing codebase. For this project that meant reading `TreasureMaze.py` and `GameExperience.py` so I knew what the methods expect/return. From there I broke the algorithm into small steps (following the pseudocode), implemented them one at a time, and checked output as I went until the pirate agent was able to complere the maze.  However, just because a problem seems "solved" doesn't mean it's the best version of the code, or that it hits every edge case. An early version of my project had the pirate solve the maze on some runs but fail to solve it in 1000 epochs on others. Fixing the code so that the pirate completes the maze on each run of the code cell took extra time but it's important to me to have code that behaves predictably and has results that can be reproduced.
 
 ### What are my ethical responsibilities to the end user and the organization?
 
-My responsibility is to build systems that are honest about what they can do, work reliably, and respect the people affected by them. For machine learning in particular, that means validating models thoroughly rather than reporting the most flattering metric, being transparent about limitations, and thinking about where a learned behavior could go wrong once the environment changes. It also means protecting the data a system learns from. A real recommender or navigation system would be trained on people's behavior, and that data deserves the same care I'd want for my own. To the organization, I owe clear documentation, reproducible results, and candor about risk, so decisions about deploying a system are made with full information.
+My responsibility is to build systems that are honest about what they can do, work reliably, and respect the people affected by them. For machine learning in particular, that means validating models thoroughly rather than reporting the best metric, and being transparent about limitations. It also means considering the ethics of a problem, and protecting the data a system learns from. A real recommender or navigation system may be trained on people's behavior, and that data deserves care and privacy. 
 
  
